@@ -1,0 +1,57 @@
+body {
+  background-color: white;
+  margin: 10px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.grid-area {
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.initial-state-area {
+  flex-grow: 1;
+}
+
+.grid-area .grid {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.grid .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.row .cell {
+  border: 0.5px solid #d2d2d2;
+
+  flex-grow: 1;
+}
+
+.dead {
+  background-color: white;
+}
+
+.alive {
+  background-color: black;
+}
