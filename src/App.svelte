@@ -93,7 +93,7 @@
   const onStartSimulation = () => {
     intervalHandler = setInterval(() => {
       calculateNextGeneration();
-    }, 200);
+    }, 300);
   };
   const onStopSimulation = () => {
     if (intervalHandler) {
