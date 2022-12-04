@@ -1,5 +1,6 @@
 <script>
   import { onMount, onDestroy } from "svelte";
+  import _ from "lodash";
   const gridSize = 50;
   const rowSize = gridSize;
   const colSize = gridSize;
@@ -55,7 +56,6 @@
     if (col - 1 > -1 && row + 1 < rowSize && board[row + 1][col - 1] === true) {
       liveNeighbors += 1;
     }
-
     return liveNeighbors;
   };
   const getCellLifeState = (row = gridSize, col = gridSize) => {
@@ -82,11 +82,13 @@
   };
 
   const calculateNextGeneration = () => {
+    const newBoard = _.cloneDeep(board);
     for (let row = 0; row < rowSize; row += 1) {
       for (let col = 0; col < colSize; col += 1) {
-        board[row][col] = getCellLifeState(row, col);
+        newBoard[row][col] = getCellLifeState(row, col);
       }
     }
+    board = newBoard;
   };
   const onStartSimulation = () => {
     intervalHandler = setInterval(() => {
