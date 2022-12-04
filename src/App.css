@@ -64,14 +64,15 @@ body {
   padding: 20px;
 }
 
-button {
+button,
+.button {
   background-color: black;
   color: white;
   border: none;
   padding: 15px;
   font-size: 17px;
   border-radius: 2px;
-  min-width: 300px;
+  min-width: 200px;
   cursor: pointer;
 }
 

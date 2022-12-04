@@ -161,6 +161,14 @@
       >
         Reset Board
       </button>
+      <button
+        type="button"
+        on:click={() => {
+          window.location = "https://github.com/AramRafeq/game-of-life";
+        }}
+      >
+        GitHub Repo
+      </button>
     </div>
   </div>
 </div>
